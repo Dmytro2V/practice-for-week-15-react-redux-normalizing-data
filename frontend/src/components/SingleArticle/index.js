@@ -4,7 +4,7 @@ import './SingleArticle.css';
 const SingleArticle = ({ articles }) => {
   const { id } = useParams();
 
-  const singleArticle = articles.find(article => article?.id?.toString() === id);
+  const singleArticle = articles[id];
   return (
     <div className='singleArticle'>
       {singleArticle && (
